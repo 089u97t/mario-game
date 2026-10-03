@@ -1,0 +1,7 @@
+FROM python:3.12-slim
+
+# pygbag compiles pygame games to WebAssembly and serves them in a browser.
+# Dependencies are baked into the image; the game source is bind-mounted at runtime.
+RUN pip install --no-cache-dir pygame-ce pygbag
+
+WORKDIR /app

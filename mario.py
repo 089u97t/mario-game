@@ -139,7 +139,9 @@ class Enemy(pygame.sprite.Sprite):
 
 # ===== Screens =====
 def start_screen():
+    clock = pygame.time.Clock()
     while True:
+        clock.tick(FPS)
         screen.fill(GREEN_BG)
         title = title_font.render("Mario Adventure", True, WHITE)
         start_text = font.render("Press ENTER to Start", True, WHITE)
@@ -155,7 +157,9 @@ def start_screen():
                 return
 
 def game_over_screen(score):
+    clock = pygame.time.Clock()
     while True:
+        clock.tick(FPS)
         screen.fill(GREEN_BG)
         over_text = title_font.render("Game Over!", True, RED)
         score_text = font.render(f"Final Score: {score}", True, WHITE)
